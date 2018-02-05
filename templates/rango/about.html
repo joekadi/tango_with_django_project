@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html>
-
+{% extends 'rango/base.html' %}	
 {% load staticfiles %}
 
-<head>
+{% block title_block %}
+	About
+{% endblock %}
 
-	<title>About</title>
+{% block body_block %}
 
-</head>
+	<strong>{{ boldmessage }}</strong><br />
+	This tutorial has been put together by Joe Kadi</br>
+	<img src="{% static "images/questionmark.jpg" %}" alt="Picture of Question Mark" />
+	<img src="{{ MEDIA_URL }}cat.jpg" />
 
-<body>
-	<div>
-		<strong>{{ boldmessage }}</strong><br />
-		This tutorial has been put together by Joe Kadi
-	</div>
-
-	<div>
-		<a href ="/rango/">Index</a><br />
-		<img src="{% static "images/questionmark.jpg" %}" alt="Picture of Question Mark" />
-		<img src="{{ MEDIA_URL }}cat.jpg" />
-
-	</div>
-</body>
-
-</html>
+{% endblock %}
